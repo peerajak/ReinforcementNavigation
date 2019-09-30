@@ -24,15 +24,22 @@ on dependencies topic to have your enviroment and dependencies installed
 
 After the above is done, you can start with
 
+
+
+
 1. Clone the repository to your local machine
 >git clone https://github.com/peerajak/ReinforcementNavigation.git
 
-2. Make sure that your kernel is the installed dependencies, in this case, dlnd enviroment. 
+2. Change directory to the cloned directory. Download the Unity Environment
+Linux: https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip
+and unzip to the cloned directory
+
+3. Make sure that your kernel is the installed dependencies, in this case, dlnd enviroment. 
 >python -m jupyter notebook Navigation.ipynb
 
 The ipython file should be automatically shown on your web browser. Then simply run all cells. Read all the instruction and comments in ipynb file.
 ### Understanding the Algorithm
-Please read TechnicalReport.pdf. 
+Please read Report.pdf. 
 
 Project Rubic
 - The submission includes the saved model weights of the successful agent. 
