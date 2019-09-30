@@ -18,5 +18,25 @@ In this project, we will show how to write a program, called an agent, to build 
 
 To solve this problem, we apply Deep Q network. In Navigation.ipynb, the Deep Q network algorithm is implemented. 
 ### Getting Started
+You need Python3 and some dependencies. An anaconda environment is recommended. Please follow 
+https://github.com/udacity/deep-reinforcement-learning
+on dependencies topic to have your enviroment and dependencies installed
 
-### Instructions
+After the above is done, you can start with
+
+1. Clone the repository to your local machine
+>git clone https://github.com/peerajak/ReinforcementNavigation.git
+
+2. Make sure that your kernel is the installed dependencies, in this case, dlnd enviroment. 
+>python -m jupyter notebook Navigation.ipynb
+
+The ipython file should be automatically shown on your web browser. Then simply run all cells. Read all the instruction and comments in ipynb file.
+### Understanding the Algorithm
+Please read TechnicalReport.pdf. 
+
+Project Rubic
+- The submission includes the saved model weights of the successful agent. 
+- state and action spaces, and when the environment is considered solved
+
+
+- explain the performance different between random and trained agent
