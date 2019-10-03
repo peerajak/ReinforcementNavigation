@@ -36,14 +36,22 @@ and unzip to the cloned directory
 
 3. Make sure that your kernel is the installed dependencies, in this case, dlnd enviroment. 
 >python -m jupyter notebook Navigation.ipynb
+The ipython file should be automatically shown on your web browser. 
 
-The ipython file should be automatically shown on your web browser. Then simply run all cells. Read all the instruction and comments in ipynb file.
+4. Understand the problem, state space, action space.
+#TODO
+5. Save your model
+#TODO
+6. Initiate new empty model and reload the saved model
+#TODO
+7. Environment solved
+#TODO
+- explain the performance different between random and trained agent
+
 ### Understanding the Algorithm
 Please read Report.pdf. 
 
-Project Rubic
-- The submission includes the saved model weights of the successful agent. 
-- state and action spaces, and when the environment is considered solved
 
 
-- explain the performance different between random and trained agent
+
+
