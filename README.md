@@ -38,18 +38,19 @@ and unzip to the cloned directory
 >python -m jupyter notebook Navigation.ipynb
 The ipython file should be automatically shown on your web browser. 
 
-4. Understand the problem, state space, action space.
-#TODO
-5. Save your model
-#TODO
-6. Initiate new empty model and reload the saved model
-#TODO
-7. Environment solved
-#TODO
-- explain the performance different between random and trained agent
+4. Save your model
+>agent.save_model(< your file Path here >)
+Check the saved file at your file path.
+
+5. Initiate new empty model and reload the saved model
+>agent2 = Agent(brain.vector_observation_space_size, brain.vector_action_space_size, seed=0)
+>agent2.load_model(< your file Path here >)
+
+6. Environment solved. This is shown in the last two cells at the end of the Navigation.ipynb,
+  where random agent are test against the trained agent. Clearly, the train agents, with avg score of ~14, triumps over random agent.
 
 ### Understanding the Algorithm
-Please read Report.pdf. 
+Please read Report.pdf to understand the implementation of deep Q network and their parameters. 
 
 
 
