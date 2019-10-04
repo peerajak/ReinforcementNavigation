@@ -9,7 +9,7 @@ Suppose you are to build an automatic banana eating monkey robot, how could you 
 , where the **'n'** is the nth botton of handjoy.
 
 In this project, we will show how to write a program, called an agent, to build an automatic banana eating monkey robot for a virtual continuous environment containing both yellow and dark blue bananas.
-
+The goal of the robot is to collect as much as possible yello bananas while avoid collecting dark blue bananas. The game ends episodically. 
  
 
 
