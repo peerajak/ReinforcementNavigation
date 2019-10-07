@@ -9,9 +9,9 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 BUFFER_SIZE = int(1e5)  # replay buffer size
-BATCH_SIZE = 64         # minibatch size
+BATCH_SIZE = 32         # minibatch size
 GAMMA = 0.999            # discount factor
-TAU = 1e-3              # for soft update of target parameters
+TAU =  1e-3              # for soft update of target parameters
 LR = 5e-5               # learning rate 
 UPDATE_EVERY = 4        # how often to update the network
 
@@ -44,7 +44,7 @@ class Agent():
         # Initialize time step (for updating every UPDATE_EVERY steps)
         self.t_step = 0
     
-    def step(self, state, action, reward, next_state, done):
+    def getConsequence(self, state, action, reward, next_state, done):
         # Save experience in replay memory
         self.memory.add(state, action, reward, next_state, done)
         
@@ -89,7 +89,10 @@ class Agent():
         ## TODO: compute and minimize the loss
         "*** YOUR CODE HERE ***"
         # Get max predicted Q values (for next states) from target model
+        #print('qnetwork_target',self.qnetwork_target(next_states).detach(),self.qnetwork_target(next_states).detach().shape)
         Q_targets_next = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
+        #print('next states are :',next_states.shape);
+        #print('Q_targets_next  is ',Q_targets_next )
         # Compute Q targets for current states 
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
 
@@ -104,9 +107,9 @@ class Agent():
         self.optimizer.step()
 
         # ------------------- update target network ------------------- #
-        self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)                     
+        self.targetNetwork_update(self.qnetwork_local, self.qnetwork_target, TAU)                     
 
-    def soft_update(self, local_model, target_model, tau):
+    def targetNetwork_update(self, local_model, target_model, tau):
         """Soft update model parameters.
         θ_target = τ*θ_local + (1 - τ)*θ_target
 
